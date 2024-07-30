@@ -3,6 +3,17 @@ let clicks = 0
 
 function add(){
     document.getElementById("count").innerHTML = clicks++
+
+
+document.addEventListener('click', function autoCliker(){
+   autoCliker()
+   if(clicks === 50){
+      document.getElementById("count") = (clicks + 1)
+        clicks -= 50
+   }
+})
+
+
     
     if(clicks >= 15){
         document.getElementById("level").textContent = "Newbie"
@@ -29,6 +40,7 @@ function add(){
      }
 
      if(clicks >= 100){
-        document.getElementById("level").textContent = "Congratulations you finished the game"
+        document.getElementById("level").textContent = "Congrat you finished the game and wasted you time only for a nonsense game"
      }
 }
+
